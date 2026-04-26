@@ -1,0 +1,557 @@
+<!DOCTYPE html><html><head>
+      <title>DOCS</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/senthilkumarps/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.8.24/crossnote/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-details{margin:0;padding:0;border:none}.markdown-preview .md-toc summary.md-toc-link-wrapper{cursor:pointer;list-style-position:outside}.markdown-preview .md-toc summary.md-toc-link-wrapper::marker{font-size:.85em}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='0']{margin-left:12px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='1']{margin-left:28px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='2']{margin-left:44px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='3']{margin-left:60px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='4']{margin-left:76px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='5']{margin-left:80px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-details{margin:0;padding:0;border:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='0']{padding-left:0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='1']{padding-left:16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='2']{padding-left:32px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='3']{padding-left:48px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='4']{padding-left:64px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='5']{padding-left:80px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="indesign-template-upgrade-script">InDesign Template Upgrade Script </h1>
+<p><code>upgrade-templates.jsx</code> — ExtendScript batch utility that upgrades legacy Adobe InDesign CS3/CS4 templates to CC 2026 format.</p>
+<hr>
+<h2 id="problem">Problem </h2>
+<p>Legacy <code>.indt</code> / <code>.indd</code> templates created in CS3 or CS4 carry two known corruptions when simply opened and re-saved in modern InDesign:</p>
+<ol>
+<li><strong>Hyphenation settings</strong> in paragraph styles do not reflect when new documents are created from the template.</li>
+<li><strong>Span Across Columns</strong> text frame attribute causes InDesign to quit — on both desktop and server — whenever one of these templates is opened.</li>
+</ol>
+<p>Simply saving the file in a newer version does not fix either issue because the corruption is preserved in the binary structure of the document.</p>
+<hr>
+<h2 id="solution">Solution </h2>
+<p>Rather than opening and re-saving, the script builds a <strong>brand-new CC 2026 document</strong> and programmatically migrates every asset from the source. Because InDesign's import APIs re-serialise all data through the current engine, both corruptions are eliminated in the output.</p>
+<hr>
+<h2 id="how-to-run">How to Run </h2>
+<ol>
+<li>Open <strong>Adobe InDesign CC 2026</strong>.</li>
+<li>Go to <strong>Window › Utilities › Scripts</strong>.</li>
+<li>Navigate to <code>upgrade-templates.jsx</code> and double-click it.</li>
+<li>A folder picker appears — select the folder that contains your <code>.indt</code> or <code>.indd</code> files. Both formats are supported.</li>
+<li>The script processes all templates (recursively) and saves the results as <code>.indt</code>.</li>
+</ol>
+<p><strong>Output</strong> is written to an <code>upgraded/</code> folder placed <strong>alongside</strong> the selected source folder:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>/path/to/your/folder/
+  source-template.indt
+upgraded/
+  source-template.indt   ← upgraded copy
+  upgrade-log.txt        ← per-file result log
+</code></pre><hr>
+<h2 id="architecture">Architecture </h2>
+<p>The script is a single self-contained ExtendScript (ES3) file.<br>
+No external dependencies. No <code>let</code>/<code>const</code>, no arrow functions — compatible with InDesign's legacy SpiderMonkey engine.</p>
+<h3 id="execution-flow">Execution flow </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>main()
+ ├── collectFiles()          — build file list recursively
+ ├── buildProgressUI()       — show floating palette
+ └── for each file:
+      └── upgradeTemplate()
+           ├── Phase A  — open source → readSettings() → close
+           ├── Phase B  — create newDoc → applySettings() → applyMeasurementUnits()
+           ├── Phase C  — importAllStyles() + safeImportSwatches()   (file closed)
+           ├── Phase D  — reopen source
+           │    ├── syncLayers()
+           │    ├── syncTextVariables()
+           │    ├── syncXmlTags()
+           │    ├── copyMasterSpreads()
+           │    ├── applyMasterPageMargins()
+           │    ├── copyFootnoteOptions()
+           │    ├── createDocumentPages()
+           │    └── copyDocumentPageContent()
+           └── Phase E  — close source → saveACopy() as .indt
+</code></pre><blockquote>
+<p><strong>Why two opens?</strong><br>
+<code>doc.importStyles()</code> cannot read from a file InDesign already holds open as a document. The source is closed before all style and swatch imports, then reopened for content and document-level operations.</p>
+</blockquote>
+<hr>
+<h2 id="modules">Modules </h2>
+<h3 id="1-entry--batch--main-collectfiles">1. Entry &amp; Batch — <code>main()</code>, <code>collectFiles()</code> </h3>
+<p><strong>Purpose:</strong> Orchestrates the entire batch run.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>main()</code></td>
+<td>Prompts for a source folder, collects files, creates the <code>upgraded/</code> output folder, opens the progress UI, iterates every template, and shows a final summary alert. Wraps the loop in a <code>finally</code> block to restore <code>UserInteractionLevels</code> even if the script crashes mid-run.</td>
+</tr>
+<tr>
+<td><code>collectFiles(folder)</code></td>
+<td>Recursively walks a folder tree and returns an array of every <code>.indt</code> and <code>.indd</code> file found. Subdirectories are traversed automatically.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="2-progress-ui--buildprogressui-setuifile-setuistep-setuiprogress">2. Progress UI — <code>buildProgressUI()</code>, <code>setUIFile()</code>, <code>setUIStep()</code>, <code>setUIProgress()</code> </h3>
+<p><strong>Purpose:</strong> A floating ScriptUI palette that gives real-time feedback during the batch run.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>buildProgressUI(total)</code></td>
+<td>Builds and returns a <code>Window("palette")</code> containing a title, a horizontal divider, the current filename (bold), a step status line (italic), a progress bar, and a counter row showing "X of Y templates" with live ✓ / ✗ tallies.</td>
+</tr>
+<tr>
+<td><code>setUIFile(ui, index, name, total)</code></td>
+<td>Called once per template at the start of each iteration. Updates the filename label, counter, and progress bar position.</td>
+</tr>
+<tr>
+<td><code>setUIStep(ui, msg, isError)</code></td>
+<td>Updates the italic step-status line and calls <code>win.update()</code> followed by <code>$.sleep(1)</code>. The 1 ms sleep yields to InDesign's event loop so the palette repaints during synchronous execution — without it, the window appears frozen.</td>
+</tr>
+<tr>
+<td><code>setUIProgress(ui, done, total, ok, fail)</code></td>
+<td>Called after each template completes. Advances the progress bar and updates the ✓ / ✗ counters.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="3-per-template-upgrade--upgradetemplate">3. Per-Template Upgrade — <code>upgradeTemplate()</code> </h3>
+<p><strong>Purpose:</strong> Coordinates all migration steps for a single source file.</p>
+<p>Key behaviours:</p>
+<ul>
+<li>Sets <code>app.scriptPreferences.measurementUnit = MeasurementUnits.POINTS</code> at the start and restores the previous value in a <code>finally</code> block, ensuring all numeric reads and writes during the run are in points regardless of the document's own unit setting.</li>
+<li>Opens the source <strong>twice</strong>: once briefly to read layout settings, and again later for content operations. This two-open pattern is required because <code>importStyles</code> and <code>loadSwatches</code> cannot read a file that InDesign holds open.</li>
+<li>Wraps all work in <code>try/finally</code> so both the source and new document are always closed, even on error.</li>
+<li>Saves the result using <code>saveACopy(outputFile, true)</code> — the <code>true</code> flag produces an InDesign template (<code>.indt</code>) rather than a regular document.</li>
+</ul>
+<hr>
+<h3 id="4-document-settings--readsettings-applysettings">4. Document Settings — <code>readSettings()</code>, <code>applySettings()</code> </h3>
+<p><strong>Purpose:</strong> Transfers page geometry from source to new document.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>What is copied</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>readSettings(doc)</code></td>
+<td>Reads <code>documentPreferences</code>: page width, page height, facing-pages flag, all four bleed offsets (top, bottom, inside/left, outside/right), and all four slug offsets. Returns a plain settings object.</td>
+</tr>
+<tr>
+<td><code>applySettings(doc, s)</code></td>
+<td>Writes the settings object to <code>newDoc.documentPreferences</code>. <strong>Margins are intentionally excluded</strong> — they travel with the master spreads via <code>duplicate()</code> and are then applied explicitly per-page by <code>applyMasterPageMargins()</code>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>All values are in <strong>points</strong> because <code>measurementUnit</code> is set to POINTS before this code runs.</p>
+</blockquote>
+<hr>
+<h3 id="5-measurement-units--applymeasurementunits">5. Measurement Units — <code>applyMeasurementUnits()</code> </h3>
+<p><strong>Purpose:</strong> Sets every ruler and measurement field in the new document to points.</p>
+<p>Applies <code>MeasurementUnits.POINTS</code> to all six properties on <code>doc.viewPreferences</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Controls</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>horizontalMeasurementUnits</code></td>
+<td>Horizontal ruler, X position, width fields</td>
+</tr>
+<tr>
+<td><code>verticalMeasurementUnits</code></td>
+<td>Vertical ruler, Y position, height fields</td>
+</tr>
+<tr>
+<td><code>typographicMeasurementUnits</code></td>
+<td>Leading, paragraph spacing</td>
+</tr>
+<tr>
+<td><code>textSizeMeasurementUnits</code></td>
+<td>Font size display</td>
+</tr>
+<tr>
+<td><code>strokeMeasurementUnits</code></td>
+<td>Stroke weight fields</td>
+</tr>
+<tr>
+<td><code>printDialogMeasurementUnits</code></td>
+<td>Print dialog offset fields</td>
+</tr>
+</tbody>
+</table>
+<p>Uses a numeric fallback (<code>2054188905</code>) in case the <code>MeasurementUnits</code> enum is inaccessible.</p>
+<hr>
+<h3 id="6-styles--swatches--importallstyles-safeimportswatches">6. Styles &amp; Swatches — <code>importAllStyles()</code>, <code>safeImportSwatches()</code> </h3>
+<p><strong>Purpose:</strong> Imports all style categories and colour swatches from the closed source file.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>importAllStyles(doc, srcFile)</code></td>
+<td>Calls <code>doc.importStyles(format, srcFile, strategy)</code> once per style category. The first parameter is <code>ImportFormat</code> — <strong>not</strong> <code>StyleType</code>, which is a different enum used for style objects. Uses <code>GlobalClashResolutionStrategy.LOAD_ALL_WITH_OVERWRITE</code> so source styles replace any CC defaults. Each format is accessed via bracket notation (<code>ImportFormat["PARAGRAPH_STYLES_FORMAT"]</code>) with a verified numeric fallback from the CC 2026 scripting reference.</td>
+</tr>
+<tr>
+<td><code>safeImportSwatches(doc, srcFile)</code></td>
+<td>Calls <code>doc.loadSwatches(srcFile)</code>. Note: <code>importSwatches()</code> does not exist in the InDesign API — the correct method is <code>loadSwatches()</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Style categories imported:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Format constant</th>
+<th>Covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PARAGRAPH_STYLES_FORMAT</code></td>
+<td>Paragraph styles and groups</td>
+</tr>
+<tr>
+<td><code>CHARACTER_STYLES_FORMAT</code></td>
+<td>Character styles</td>
+</tr>
+<tr>
+<td><code>TABLE_STYLES_FORMAT</code></td>
+<td>Table styles</td>
+</tr>
+<tr>
+<td><code>CELL_STYLES_FORMAT</code></td>
+<td>Cell styles</td>
+</tr>
+<tr>
+<td><code>OBJECT_STYLES_FORMAT</code></td>
+<td>Object styles</td>
+</tr>
+<tr>
+<td><code>TEXT_STYLES_FORMAT</code></td>
+<td>All text styles combined</td>
+</tr>
+<tr>
+<td><code>TOC_STYLES_FORMAT</code></td>
+<td>Table of contents styles</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The source file must be <strong>closed</strong> when these calls are made, otherwise InDesign refuses to read from it.</p>
+</blockquote>
+<hr>
+<h3 id="7-layers--synclayers">7. Layers — <code>syncLayers()</code> </h3>
+<p><strong>Purpose:</strong> Replicates the source document's layer stack in the new document, preserving name, visibility, lock state, and panel colour.</p>
+<p>Iterates source layers in <strong>reverse order</strong> (bottom to top) so <code>layers.add()</code> builds the correct stacking sequence.</p>
+<ul>
+<li>If a layer with the same name does <strong>not</strong> exist in the new document, it is created with all four properties.</li>
+<li>If a layer already exists (e.g. the default "Layer 1" that every new document starts with), its <code>visible</code>, <code>locked</code>, and <code>layerColor</code> properties are updated to match the source.</li>
+</ul>
+<hr>
+<h3 id="8-text-variables--synctextvariables">8. Text Variables — <code>syncTextVariables()</code> </h3>
+<p><strong>Purpose:</strong> Recreates all text variables defined in the source document.</p>
+<p>Each variable type requires different properties, handled via a <code>switch</code> on <code>sv.variableType</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Variable type</th>
+<th>Extra properties copied</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CUSTOM_TEXT_TYPE</code></td>
+<td><code>variableValue</code></td>
+</tr>
+<tr>
+<td><code>FILE_NAME_TYPE</code></td>
+<td><code>includeExtension</code>, <code>includePath</code></td>
+</tr>
+<tr>
+<td><code>CREATION_DATE_TYPE</code>, <code>MODIFICATION_DATE_TYPE</code>, <code>OUTPUT_DATE_TYPE</code></td>
+<td><code>dateFormat</code></td>
+</tr>
+<tr>
+<td><code>MATCH_PARAGRAPH_STYLE_TYPE</code>, <code>MATCH_CHARACTER_STYLE_TYPE</code></td>
+<td><code>textBefore</code>, <code>textAfter</code>, <code>includeFirstOnPage</code></td>
+</tr>
+<tr>
+<td><code>CHAPTER_NUMBER_TYPE</code></td>
+<td><code>format</code></td>
+</tr>
+</tbody>
+</table>
+<p>Variables that already exist in the new document (by name) are skipped.</p>
+<hr>
+<h3 id="9-xml-tags--syncxmltags">9. XML Tags — <code>syncXmlTags()</code> </h3>
+<p><strong>Purpose:</strong> Recreates all XML structure tags defined in the source.</p>
+<p>For each tag in <code>srcDoc.xmlTags</code>, creates a matching tag in <code>newDoc</code> with the same <code>name</code> and <code>color</code>. Tags that already exist (by name) are skipped.</p>
+<hr>
+<h3 id="10-master-spreads--copymasterspreads-applymasterpagemargins">10. Master Spreads — <code>copyMasterSpreads()</code>, <code>applyMasterPageMargins()</code> </h3>
+<p><strong>Purpose:</strong> Loads all source master spreads (parent pages) into the new document as complete units, then applies the correct margins to each master page.</p>
+<h4 id="copymasterspreadssrcdoc-newdoc"><code>copyMasterSpreads(srcDoc, newDoc)</code> </h4>
+<p>Implements the equivalent of <strong>Pages panel › Load Parent Pages</strong>:</p>
+<ol>
+<li>Detaches all document pages from their current masters (<code>appliedMaster = NothingEnum.NOTHING</code>) so the default blank masters are unreferenced.</li>
+<li>Removes all existing masters from the new document.</li>
+<li>Calls <code>srcDoc.masterSpreads[i].duplicate(LocationOptions.AT_END, newDoc)</code> for each source master — this transfers the entire spread as a unit including text frames, image frames, guides, and page geometry, without manual item-by-item copying.</li>
+</ol>
+<h4 id="applymasterpagemarginssrcdoc-newdoc"><code>applyMasterPageMargins(srcDoc, newDoc)</code> </h4>
+<p>After <code>duplicate()</code>, margin guides may revert to document defaults. This function:</p>
+<ol>
+<li>Iterates every master spread in the new document.</li>
+<li>Finds its counterpart in the source by matching <code>namePrefix</code> and <code>baseName</code> via <code>findSourceMaster()</code>.</li>
+<li>Copies <code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>, <code>columnCount</code>, and <code>columnGutter</code> from <code>srcPage.marginPreferences</code> to <code>tgtPage.marginPreferences</code> for each page in the spread, using <code>copyPageMargins()</code>.</li>
+</ol>
+<hr>
+<h3 id="11-document-pages--createdocumentpages-findmasterspread">11. Document Pages — <code>createDocumentPages()</code>, <code>findMasterSpread()</code> </h3>
+<p><strong>Purpose:</strong> Sets up exactly 3 document pages and assigns the correct parent pages.</p>
+<p>After master spreads are loaded:</p>
+<ol>
+<li>Trims or extends the page count to exactly <strong>3</strong>.</li>
+<li>Finds <code>A-CH_OP</code> (opening chapter master) using <code>findMasterSpread(doc, "A", "CH_OP")</code>.</li>
+<li>Finds <code>B-CH_BODY</code> (body chapter master) using <code>findMasterSpread(doc, "B", "CH_BODY")</code>.</li>
+<li>Assigns:
+<ul>
+<li>Page 1 → <code>A-CH_OP</code></li>
+<li>Pages 2–3 → <code>B-CH_BODY</code></li>
+</ul>
+</li>
+</ol>
+<p>If a named master does not exist in the template being processed, the assignment is silently skipped so the batch does not fail.</p>
+<hr>
+<h3 id="12-footnote-options--copyfootnoteoptions">12. Footnote Options — <code>copyFootnoteOptions()</code> </h3>
+<p><strong>Purpose:</strong> Copies all document footnote settings — both the Formatting and Layout tabs — from source to new document.</p>
+<p>Handles three categories of properties:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Properties</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Simple values</strong> (33 properties)</td>
+<td>Numbers, booleans, strings, and enum values including <code>footnoteNumberingStyle</code>, <code>markerPositioning</code>, <code>restartNumbering</code>, <code>showPrefixSuffix</code>, <code>spaceBetween</code>, <code>spacer</code>, <code>eosPlacement</code>, <code>noSplitting</code>, <code>enableStraddling</code>, baseline settings, all rule on/off/width/weight/offset/tint/overprint properties for both the first-column rule and the continuing-column rule</td>
+<td>Assigned directly in a loop</td>
+</tr>
+<tr>
+<td><strong>Style references</strong></td>
+<td><code>footnoteTextStyle</code> (ParagraphStyle), <code>footnoteMarkerStyle</code> (CharacterStyle)</td>
+<td>Looked up by name in <code>newDoc</code>'s already-imported style collections</td>
+</tr>
+<tr>
+<td><strong>Swatch &amp; stroke references</strong></td>
+<td><code>ruleColor</code>, <code>ruleGapColor</code>, <code>continuingRuleColor</code>, <code>continuingRuleGapColor</code>, <code>ruleType</code>, <code>continuingRuleType</code></td>
+<td>Looked up by name in <code>newDoc.swatches</code> and <code>newDoc.strokeStyles</code></td>
+</tr>
+</tbody>
+</table>
+<p>This function runs <strong>after</strong> styles and swatches are imported so all name lookups resolve correctly.</p>
+<hr>
+<h3 id="13-page-content--threading--copydocumentpagecontent">13. Page Content &amp; Threading — <code>copyDocumentPageContent()</code> </h3>
+<p><strong>Purpose:</strong> Copies all top-level page items from source document pages to the corresponding pages in the new document, then restores text frame threading.</p>
+<p>Operates in two phases:</p>
+<p><strong>Phase 1 — Duplicate</strong><br>
+Iterates source pages up to <code>min(srcDoc.pages.length, newDoc.pages.length)</code> (capped at 3). Each top-level item on <code>srcDoc.pages[p]</code> is duplicated to <code>newDoc.pages[p]</code> using <code>srcItem.duplicate(targetPage)</code>. A <code>frameMap</code> dictionary records <code>sourceItemId → duplicateItem</code> for every successfully duplicated item.</p>
+<p><strong>Phase 2 — Re-thread</strong><br>
+Re-iterates the same pages. For each item, it attempts to read <code>nextTextFrame</code> — this throws on non-text-frame objects (image frames, groups, etc.) which are skipped via <code>catch</code>. When a source text frame had a valid <code>nextTextFrame</code>, both the current frame and its next frame are looked up in <code>frameMap</code> and <code>tgtFrame.nextTextFrame = tgtNext</code> re-establishes the thread link. This correctly restores threading chains that span multiple pages.</p>
+<hr>
+<h3 id="14-logging--openlog-writelog-closelog">14. Logging — <code>openLog()</code>, <code>writeLog()</code>, <code>closeLog()</code> </h3>
+<p><strong>Purpose:</strong> Writes a plain-text audit trail to <code>upgrade-log.txt</code> in the output folder.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>openLog(outFolder, srcFolder, total)</code></td>
+<td>Opens the log file for writing and writes the header: date, source path, output path, and total file count.</td>
+</tr>
+<tr>
+<td><code>writeLog(f, status, name, msg)</code></td>
+<td>Appends one line per template: <code>[SUCCESS] filename.indt</code> or <code>[ERROR] filename.indt | error message</code>.</td>
+</tr>
+<tr>
+<td><code>closeLog(f, ok, fail)</code></td>
+<td>Writes the final summary line (<code>X succeeded, Y failed</code>) and closes the file handle.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="what-gets-migrated">What Gets Migrated </h2>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>API used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Paragraph styles</td>
+<td><code>doc.importStyles(ImportFormat.PARAGRAPH_STYLES_FORMAT, file, strategy)</code></td>
+</tr>
+<tr>
+<td>Character styles</td>
+<td><code>doc.importStyles(ImportFormat.CHARACTER_STYLES_FORMAT, ...)</code></td>
+</tr>
+<tr>
+<td>Table styles</td>
+<td><code>doc.importStyles(ImportFormat.TABLE_STYLES_FORMAT, ...)</code></td>
+</tr>
+<tr>
+<td>Cell styles</td>
+<td><code>doc.importStyles(ImportFormat.CELL_STYLES_FORMAT, ...)</code></td>
+</tr>
+<tr>
+<td>Object styles</td>
+<td><code>doc.importStyles(ImportFormat.OBJECT_STYLES_FORMAT, ...)</code></td>
+</tr>
+<tr>
+<td>TOC styles</td>
+<td><code>doc.importStyles(ImportFormat.TOC_STYLES_FORMAT, ...)</code></td>
+</tr>
+<tr>
+<td>Colour swatches</td>
+<td><code>doc.loadSwatches(file)</code></td>
+</tr>
+<tr>
+<td>Layers (name, visibility, lock, colour)</td>
+<td><code>doc.layers.add()</code> / property assignment</td>
+</tr>
+<tr>
+<td>Text variables</td>
+<td><code>doc.textVariables.add()</code> with type-specific properties</td>
+</tr>
+<tr>
+<td>XML tags</td>
+<td><code>doc.xmlTags.add()</code></td>
+</tr>
+<tr>
+<td>Master spreads (full content)</td>
+<td><code>masterSpread.duplicate(LocationOptions.AT_END, targetDoc)</code></td>
+</tr>
+<tr>
+<td>Master page margins</td>
+<td><code>page.marginPreferences</code> read/write</td>
+</tr>
+<tr>
+<td>Document footnote options</td>
+<td><code>doc.footnoteOptions</code> — all 46 properties</td>
+</tr>
+<tr>
+<td>Page dimensions, bleed, slug</td>
+<td><code>doc.documentPreferences</code></td>
+</tr>
+<tr>
+<td>Document pages + parent page assignments</td>
+<td><code>doc.pages.add()</code> + <code>page.appliedMaster</code></td>
+</tr>
+<tr>
+<td>Page frame content</td>
+<td><code>pageItem.duplicate(targetPage)</code></td>
+</tr>
+<tr>
+<td>Text frame threading</td>
+<td><code>textFrame.nextTextFrame</code></td>
+</tr>
+<tr>
+<td>Ruler &amp; measurement units</td>
+<td><code>doc.viewPreferences.*MeasurementUnits</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="output-files">Output Files </h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>upgraded/&lt;name&gt;.indt</code></td>
+<td>Upgraded InDesign CC 2026 template</td>
+</tr>
+<tr>
+<td><code>upgraded/upgrade-log.txt</code></td>
+<td>Run log with per-file SUCCESS / ERROR status</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="supported-source-formats">Supported Source Formats </h2>
+<p>Both <code>.indt</code> (InDesign template) and <code>.indd</code> (InDesign document) files are processed identically. The <code>collectFiles()</code> function matches both extensions (case-insensitive). Output is always saved as <code>.indt</code> regardless of the source extension.</p>
+<p>When opening <code>.indt</code> files, the script passes <code>OpenOptions.OPEN_ORIGINAL_ONLY</code> so InDesign opens the template file itself rather than creating a new untitled document from it. A runtime fallback covers InDesign versions where this enum is unavailable.</p>
+<hr>
+<h2 id="cross-platform-path-safety">Cross-Platform Path Safety </h2>
+<p>The script runs on both <strong>macOS</strong> and <strong>Windows</strong> without modification.</p>
+<p>All path construction uses ExtendScript <code>Folder</code> and <code>File</code> objects directly rather than <code>.fsName</code> strings:</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript javascript"><code><span class="token comment">// Safe on both platforms — ExtendScript stringifies Folder/File as a POSIX path</span>
+<span class="token keyword keyword-var">var</span> outFolder <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Folder</span><span class="token punctuation">(</span>srcFolder<span class="token punctuation">.</span><span class="token property-access">parent</span> <span class="token operator">+</span> <span class="token string">"/"</span> <span class="token operator">+</span> <span class="token constant">UPGRADED_FOLDER</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-var">var</span> outputFile <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span>outFolder <span class="token operator">+</span> <span class="token string">"/"</span> <span class="token operator">+</span> baseName <span class="token operator">+</span> <span class="token string">".indt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><ul>
+<li>On macOS, <code>Folder</code> and <code>File</code> objects stringify as POSIX paths (<code>/Volumes/...</code>).</li>
+<li>On Windows, ExtendScript internally translates them to UNC/drive paths when the OS call is made — the script author never needs to handle backslashes.</li>
+<li>Using <code>.fsName</code> would return OS-native paths (backslashes on Windows), which break when concatenated with <code>/</code> separators.</li>
+</ul>
+<hr>
+<h2 id="language-constraints">Language Constraints </h2>
+<p>The script targets InDesign's legacy <strong>ExtendScript (ES3)</strong> engine:</p>
+<ul>
+<li>No <code>let</code> or <code>const</code> — use <code>var</code></li>
+<li>No arrow functions — use <code>function</code> keyword</li>
+<li>No <code>Array.forEach</code> — use <code>for</code> loops</li>
+<li>No template literals — use string concatenation</li>
+<li><code>#target indesign</code> directive required at the top of the file</li>
+<li>All enum values accessed with named properties and numeric integer fallbacks for version safety</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
