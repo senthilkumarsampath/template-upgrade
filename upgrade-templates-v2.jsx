@@ -362,6 +362,29 @@ ContentSync.copyDocumentPageContent = function(srcDoc, newDoc) {
     }
 };
 
+// Removes all child elements from the new document's XML root element.
+// Tag definitions (xmlTags) are preserved; only the element tree is cleared.
+ContentSync.clearRootXmlContent = function(doc) {
+    try {
+        var root = doc.xmlElements[0];
+        // removeAll() is the fastest path; fall back to reverse loop if unavailable.
+        try {
+            root.xmlElements.everyItem().remove();
+        } catch (e) {
+            for (var i = root.xmlElements.length - 1; i >= 0; i--) {
+                try { root.xmlElements[i].remove(); } catch (e2) {}
+            }
+        }
+    } catch (e) {}
+}
+//     try {
+//         var root = doc.xmlElement;
+//         for (var i = root.xmlElements.length - 1; i >= 0; i--) {
+//             try { root.xmlElements[i].remove(); } catch (e) {}
+//         }
+//     } catch (e) {}
+// };
+
 ContentSync.copyFootnoteOptions = function(srcDoc, newDoc) {
     var src, tgt;
     try { src = srcDoc.footnoteOptions; } catch (e) { return; }
@@ -519,6 +542,9 @@ function upgradeTemplate(srcFile, outFolder, ui) {
 
         UI.setStep(ui, "Copying page frames...", false);
         ContentSync.copyDocumentPageContent(srcDoc, newDoc);
+
+        UI.setStep(ui, "Clearing XML content from root element...", false);
+        ContentSync.clearRootXmlContent(newDoc);
 
         srcDoc.close(SaveOptions.NO);
         srcDoc = null;
