@@ -385,6 +385,30 @@ ContentSync.clearRootXmlContent = function(doc) {
 //     } catch (e) {}
 // };
 
+ContentSync.renameRootXmlTag = function(doc, tagName) {
+    try {
+        var root = doc.xmlElements[0];
+        var tag;
+        try {
+            tag = doc.xmlTags.itemByName(tagName);
+            if (!tag.isValid) {
+                tag = doc.xmlTags.add(tagName);
+            }
+        } catch (e) {
+            tag = doc.xmlTags.add(tagName);
+        }
+        root.markupTag = tag;
+    } catch (e) {}
+};
+
+ContentSync.importXml = function(doc, xmlPath) {
+    try {
+        var xmlFile = new File(xmlPath);
+        if (!xmlFile.exists) { return; }
+        doc.importXML(xmlFile);
+    } catch (e) {}
+};
+
 ContentSync.copyFootnoteOptions = function(srcDoc, newDoc) {
     var src, tgt;
     try { src = srcDoc.footnoteOptions; } catch (e) { return; }
@@ -545,6 +569,8 @@ function upgradeTemplate(srcFile, outFolder, ui) {
 
         UI.setStep(ui, "Clearing XML content from root element...", false);
         ContentSync.clearRootXmlContent(newDoc);
+        ContentSync.renameRootXmlTag(newDoc, "book");
+        ContentSync.importXml(newDoc, "/Users/lenin/Documents/experiments/dev-projects/template-upgrade/import.xml");
 
         srcDoc.close(SaveOptions.NO);
         srcDoc = null;
